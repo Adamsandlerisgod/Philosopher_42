@@ -6,14 +6,14 @@
 #    By: whendrik <whendrik@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/30 16:08:21 by whendrik          #+#    #+#              #
-#    Updated: 2023/11/07 19:58:02 by whendrik         ###   ########.fr        #
+#    Updated: 2023/11/09 17:52:13 by whendrik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #FLAGS
 CC = gcc
-# C_FLAGS = -Wall -Wextra -Werror -g -o3
-# S_FLAGS = -g -fsanitize=address,undefined
+C_FLAGS = -Wall -Wextra -Werror -g -o3
+S_FLAGS = -g -fsanitize=address,undefined
 
 #commands
 RM = rm -rf

@@ -6,7 +6,7 @@
 /*   By: whendrik <whendrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 17:33:19 by whendrik          #+#    #+#             */
-/*   Updated: 2023/11/09 15:25:09 by whendrik         ###   ########.fr       */
+/*   Updated: 2023/11/09 17:49:01 by whendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,21 +61,18 @@ typedef struct s_var
 }	t_var;
 
 /*Initializers & Malloc*/
-bool	init_time(char **av, int ac, t_times *time);
-bool	init_forks(int size, t_var *var);
-bool	init_philosopher(int size, t_var *var, t_times time);
-bool	mallocer(int size, t_var *var);
+bool		init_time(char **av, int ac, t_times *time);
+bool		init_forks(int size, t_var *var);
+bool		init_philosopher(int size, t_var *var, t_times time);
+bool		mallocer(int size, t_var *var);
 
 /*Routine*/
-void	*routine(void *arg);
+void		*routine(void *arg);
 
 /*utils*/
 long long	get_time(void);
-int	ft_atoi(const char *str);
-int	print_msg(char *string, t_philo *philo);
-void	free_all(t_var *var, int size);
-
-
-
+int			ft_atoi(const char *str);
+int			print_msg(char *string, t_philo *philo);
+void		free_all(t_var *var, int size);
 
 #endif

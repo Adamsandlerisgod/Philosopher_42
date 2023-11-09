@@ -14,7 +14,8 @@
 
 bool	init_time(char **av, int ac, t_times *time)
 {
-	struct	timeval	the_time;
+	struct timeval	the_time;
+
 	time->die = ft_atoi(av[2]) * 1000;
 	time->eat = ft_atoi(av[3]) * 1000;
 	time->sleep = ft_atoi(av[4]) * 1000;
@@ -24,14 +25,14 @@ bool	init_time(char **av, int ac, t_times *time)
 		time->max_ml = 0;
 	if (gettimeofday(&the_time, NULL) == 0)
 		time->start = the_time.tv_sec * 1000000 + the_time.tv_usec;
-	else 
+	else
 		return (false);
 	return (true);
 }
 
 bool	init_forks(int size, t_var *var)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < size)
@@ -59,7 +60,6 @@ bool	init_philosopher(int size, t_var *var, t_times time)
 		var->philo[i].lock = var->lock;
 		var->philo[i].fork_l = &var->fork[i];
 		var->philo[i].mutex_l = &var->mutex[i];
-		printf("philo[%d]->is alive = %d \n", var->philo->philo_id, *var->philo->is_alive);
 		if (i == 0)
 		{
 			var->philo[i].mutex_r = &var->mutex[size - 1];
