@@ -6,7 +6,7 @@
 /*   By: whendrik <whendrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 17:33:27 by whendrik          #+#    #+#             */
-/*   Updated: 2023/11/09 17:47:04 by whendrik         ###   ########.fr       */
+/*   Updated: 2023/11/09 17:57:43 by whendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ long long	get_time(void)
 	return (time.tv_sec * 1000000 + time.tv_usec);
 }
 
-bool	limit_check(int ac, char **av, t_var *vars)
+bool	limit_check(int ac, char **av)
 {
 	if (ft_atoi(av[1]) > 200 || ft_atoi(av[1]) < 1 || ft_atoi(av[2]) < 60
 		|| ft_atoi(av[3]) < 60 || ft_atoi(av[4]) < 60)
@@ -63,7 +63,7 @@ int	main(int ac, char **av)
 
 	if (ac > 6 || ac < 4)
 		exit(1);
-	if (!(limit_check(ac, av, &vars)))
+	if (!(limit_check(ac, av)))
 		exit(1);
 	if (!(init_time(av, ac, &time)))
 		exit(1);
