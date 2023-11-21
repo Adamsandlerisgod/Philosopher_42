@@ -6,7 +6,7 @@
 /*   By: whendrik <whendrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 17:33:19 by whendrik          #+#    #+#             */
-/*   Updated: 2023/11/09 17:49:01 by whendrik         ###   ########.fr       */
+/*   Updated: 2023/11/21 20:42:21 by whendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@
 # define SLEEP "\033[1;34m[%ld ms] philo %d is sleeping\033[0m\n"
 # define THINK "\033[1;38;5;208m[%ld ms] philo %d is thinking\033[0m\n"
 # define DIED "\033[1;31m[%ld ms] philo %d is dead\033[0m\n"
+
+# define ERR_1 "Bad Input: ONLY 5 to 6 Arguments Please\n"
+# define ERR_2 "Bad Input\n"
+# define ERR_3 "\033[1;34m[%ld ms] philo %d is sleeping\033[0m\n"
+# define ERR_4 "\033[1;38;5;208m[%ld ms] philo %d is thinking\033[0m\n"
+# define ERR_5 "\033[1;31m[%ld ms] philo %d is dead\033[0m\n"
 
 typedef struct s_times
 {
@@ -74,5 +80,7 @@ long long	get_time(void);
 int			ft_atoi(const char *str);
 int			print_msg(char *string, t_philo *philo);
 void		free_all(t_var *var, int size);
+int			ft_strlen(char *str);
+bool		arg_check(int ac, char **av);
 
 #endif

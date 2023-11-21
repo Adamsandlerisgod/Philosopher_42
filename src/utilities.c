@@ -6,7 +6,7 @@
 /*   By: whendrik <whendrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 17:44:28 by whendrik          #+#    #+#             */
-/*   Updated: 2023/11/09 17:32:28 by whendrik         ###   ########.fr       */
+/*   Updated: 2023/11/21 20:36:38 by whendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,14 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (res * sign);
+}
+
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

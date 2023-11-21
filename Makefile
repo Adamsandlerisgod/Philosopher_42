@@ -6,7 +6,7 @@
 #    By: whendrik <whendrik@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/30 16:08:21 by whendrik          #+#    #+#              #
-#    Updated: 2023/11/09 17:52:13 by whendrik         ###   ########.fr        #
+#    Updated: 2023/11/21 20:25:09 by whendrik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ AR = ar rc
 #Targlib name and dirs
 NAME = philo
 SRC_DIR =src
-SRC_FILES= main.c init.c mallocer.c routine.c utilities.c  
+SRC_FILES= main.c init.c mallocer.c routine.c utilities.c arg_check.c 
 
 OBJ_DIR = obj
 INC_DIR = includes
